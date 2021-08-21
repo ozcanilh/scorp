@@ -27,10 +27,10 @@
         <button mat-menu-item>{{ 'user.email' | translate }}: {{email}}</button>
         <button mat-menu-item (click)="logout()">{{ 'navigation.logout' | translate }}</button>
       </mat-menu>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu2">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <mat-menu #menu="matMenu">
+      <mat-menu #menu2="matMenu">
         <button mat-menu-item>
           <span>{{ 'user.name' | translate }}: {{userName}}</span>
         </button>
