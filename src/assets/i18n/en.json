@@ -1,0 +1,40 @@
+{
+  "Turkey": "Turkey",
+  "United States of America": "America",
+  "United Kingdom": "United Kingdom",
+  "Germany": "Germany",
+  "Sweden": "Sweden",
+  "Kenya": "Kenya",
+  "Brazil": "Brazil",
+  "Zimbabwe": "Zimbabwe",
+  "Select Country": "Select Country",
+  "name can not be empty": "Name can not be empty.",
+  "title can not be empty": "Title can not be empty.",
+  "email can not be empty": "Email can not be empty.",
+  "phone can not be empty": "Phone can not be empty.",
+  "password can not be empty": "Password can not be empty.",
+  "message can not be empty": "Message can not be empty.",
+  "country can not be empty": "Country can not be empty.",
+  "email format is wrong": "email format is wrong.",
+  "message should be min 10 character": "Message should be min 10 character.",
+  "navigation": {
+    "home": "Home",
+    "contact": "Contact",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "user": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "title": "Title",
+    "phone": "Phone",
+    "message": "Message"
+  },
+  "action": {
+    "send": "Send"
+  },
+  "text": {
+    "home": "Home Page is working. Welcome!"
+  }
+}

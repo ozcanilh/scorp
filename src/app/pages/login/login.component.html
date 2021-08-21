@@ -1,0 +1,25 @@
+<app-page-title [title]="'navigation.login' | translate"></app-page-title>
+<form (ngSubmit)= "onSubmit()" [formGroup]="loginForm">
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="{{ 'user.name' | translate }}" formControlName="name" required>
+      <mat-error *ngIf="getControls.name.invalid">{{myvalidationService.getValidationMessage(getControls.name, 'name') | translate}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="{{ 'user.email' | translate }}" formControlName="email" required>
+      <mat-error *ngIf="getControls.email.invalid">{{myvalidationService.getValidationMessage(getControls.email, 'email') | translate}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" matInput placeholder="{{ 'user.password' | translate }}" formControlName="password" required>
+      <mat-error *ngIf="getControls.password.invalid">{{myvalidationService.getValidationMessage(getControls.password, 'password') | translate}}</mat-error>
+    </mat-form-field>
+    <button type="submit" color="primary" mat-raised-button>
+      <span role="status" aria-hidden="true"></span>
+      {{ 'navigation.login' | translate }}
+    </button>
+  </div>
+</form>
+<div *ngIf="info!=null" class="alert" [ngClass]="{'alert-primary':success, 'alert-danger':!success}">
+  {{info}}
+</div>
+

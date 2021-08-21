@@ -1,0 +1,54 @@
+<app-page-title [title]="'navigation.contact' | translate"></app-page-title>
+<form (ngSubmit)= "onSubmit()" [formGroup]="contactForm">
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="{{ 'user.title' | translate }}" formControlName="title" required>
+      <mat-error *ngIf="getControls.title.invalid">{{myvalidationService
+        .getValidationMessage(getControls.title, 'title') | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="{{ 'user.name' | translate }}" id="myInput" formControlName="name" required>
+      <mat-error *ngIf="getControls.name.invalid">{{myvalidationService
+        .getValidationMessage(getControls.name, 'name') | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="{{ 'user.email' | translate }}" formControlName="email" required>
+      <mat-error *ngIf="getControls.email.invalid">{{myvalidationService
+        .getValidationMessage(getControls.email, 'email') | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="{{ 'user.phone' | translate }}" formControlName="phone" required>
+      <mat-error *ngIf="getControls.phone.invalid">{{myvalidationService
+        .getValidationMessage(getControls.phone, 'phone') | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>{{ 'Select Country' | translate }}</mat-label>
+      <input type="text" matInput formControlName="country" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option.name | translate}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-error *ngIf="getControls.country.invalid">{{myvalidationService
+        .getValidationMessage(getControls.country, 'country') | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea rows="10" matInput placeholder="{{ 'user.message' | translate }}" formControlName="message" required></textarea>
+      <mat-error *ngIf="getControls.message.invalid">{{myvalidationService
+        .getValidationMessage(getControls.message, 'message') | translate }}
+      </mat-error>
+    </mat-form-field>
+    <button type="submit" [disabled]= "loading" color="primary" mat-raised-button>
+      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      {{ 'action.send' | translate }}
+    </button>
+  </div>
+</form>
+<div *ngIf="info!=null" class="alert" [ngClass]="{'alert-primary':success, 'alert-danger':!success}">
+  {{info}}
+</div>

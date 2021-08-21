@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <i class="fas fa-bullhorn"></i>
+      <a class="navbar-brand">Blog</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item" [ngClass]="{'active': pageActive == 1}">
+            <a class="nav-link" routerLink="/">{{ 'navigation.home' | translate }}<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': pageActive == 2}">
+            <a class="nav-link" routerLink="/contact">{{ 'navigation.contact' | translate }}<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" *ngIf="!userName" [ngClass]="{'active': pageActive == 3}">
+            <a class="nav-link" routerLink="/login">{{ 'navigation.login' | translate }}<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+      <button mat-button [matMenuTriggerFor]="menu" color="success" *ngIf="userName">{{ 'user.name' | translate }}: {{userName}}</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>{{ 'user.email' | translate }}: {{email}}</button>
+        <button mat-menu-item (click)="logout()">{{ 'navigation.logout' | translate }}</button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>{{ 'user.name' | translate }}: {{userName}}</span>
+        </button>
+      </mat-menu>
+    </div>
+    <label>
+      <select #langselect (change)="changeLanguage(langselect.value)">
+        <option *ngFor= "let lang of translate.getLangs()" [value]="lang"> {{lang}}</option>
+      </select>
+    </label>
+  </div>
+</nav>

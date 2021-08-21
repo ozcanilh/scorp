@@ -1,0 +1,40 @@
+{
+  "Turkey": "Türkiye",
+  "United States of America": "Amerika",
+  "United Kingdom": "Birleşik Krallık",
+  "Germany": "Almanya",
+  "Sweden": "İsveç",
+  "Kenya": "Kenya",
+  "Brazil": "Brazilya",
+  "Zimbabwe": "Zimbabve",
+  "Select Country": "Ülke Seçin",
+  "name can not be empty": "İsim alanı boş olamaz.",
+  "title can not be empty": "Başlık alanı boş olamaz.",
+  "email can not be empty": "Eposta alanı boş olamaz.",
+  "phone can not be empty": "Telefon alanı boş olamaz.",
+  "password can not be empty": "Şifre alanı boş olamaz.",
+  "message can not be empty": "Mesaj alanı boş olamaz.",
+  "country can not be empty": "Şehir alanı boş olamaz.",
+  "email format is wrong": "Email formatı yanlış",
+  "message should be min 10 character": "Mesaj en az 10 karakter olmalı.",
+  "navigation": {
+    "home": "AnaSayfa",
+    "contact": "İletişim",
+    "login": "Giriş",
+    "logout": "Çıkış"
+  },
+  "user": {
+    "name": "İsim",
+    "email": "Eposta",
+    "password": "Şifre",
+    "title": "Başlık",
+    "phone": "Telefon",
+    "message": "Mesaj"
+  },
+  "action": {
+    "send": "Gönder"
+  },
+  "text": {
+    "home": "Ana Sayfa Çalışıyor. Hoşgeldiniz!"
+  }
+}
