@@ -20,16 +20,16 @@ export class MainNavComponent implements OnInit {
   pageActive: MainPage;
   constructor(private router: Router, public translate: TranslateService) {
     translate.addLangs(['en', 'tr']);
+    const language = localStorage.getItem('i18nextLng');
 
-    if (localStorage.getItem('language')) {
-      translate.setDefaultLang(localStorage.getItem('language'));
-      translate.use(localStorage.getItem('language'));
+    if (language) {
+      translate.use(language);
     } else {
       translate.setDefaultLang('en');
+      /*For browser language
       const browserLang = translate.getBrowserLang();
-      translate.use(browserLang.match(/en|tr/) ? browserLang : 'en');
+      translate.use(browserLang.match(/en|tr/) ? browserLang : 'en');*/
       translate.use('en');
-      localStorage.setItem('language', 'en');
     }
 
     this.router.events.subscribe(x => {
@@ -52,11 +52,6 @@ export class MainNavComponent implements OnInit {
       this.userName = localStorage.getItem('name');
       this.email = localStorage.getItem('email');
     }
-  }
-
-  changeLanguage(lang) {
-    this.translate.use(lang);
-    localStorage.setItem('language', lang);
   }
 
   logout() {

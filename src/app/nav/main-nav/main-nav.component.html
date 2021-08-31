@@ -27,18 +27,19 @@
         <button mat-menu-item>{{ 'user.email' | translate }}: {{email}}</button>
         <button mat-menu-item (click)="logout()">{{ 'navigation.logout' | translate }}</button>
       </mat-menu>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu1">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <mat-menu #menu="matMenu">
+      <mat-menu #menu1="matMenu">
         <button mat-menu-item>
-          <span>{{ 'user.name' | translate }}: {{userName}}</span>
+          <span *ngIf="userName">{{ 'user.name' | translate }}: {{userName}}</span>
+          <span *ngIf="!userName">{{ 'login required' | translate }}</span>
         </button>
       </mat-menu>
     </div>
     <label>
-      <select #langselect (change)="changeLanguage(langselect.value)">
-        <option *ngFor= "let lang of translate.getLangs()" [value]="lang"> {{lang}}</option>
+      <select #langselect (change)="translate.use(langselect.value)">
+        <option *ngFor= "let lang of translate.getLangs()" [value]="lang">{{lang}}</option>
       </select>
     </label>
   </div>

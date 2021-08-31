@@ -7,7 +7,7 @@
   "Kenya": "Kenya",
   "Brazil": "Brazilya",
   "Zimbabwe": "Zimbabve",
-  "Select Country": "Ülke Seçin",
+  "select country": "Ülke Seçin",
   "name can not be empty": "İsim alanı boş olamaz.",
   "title can not be empty": "Başlık alanı boş olamaz.",
   "email can not be empty": "Eposta alanı boş olamaz.",
@@ -17,6 +17,7 @@
   "country can not be empty": "Şehir alanı boş olamaz.",
   "email format is wrong": "Email formatı yanlış",
   "message should be min 10 character": "Mesaj en az 10 karakter olmalı.",
+  "login required": "Görüntülemek için giriş gerekiyor",
   "navigation": {
     "home": "AnaSayfa",
     "contact": "İletişim",
@@ -36,5 +37,8 @@
   },
   "text": {
     "home": "Ana Sayfa Çalışıyor. Hoşgeldiniz!"
+  },
+  "footer": {
+    "copyright": "Telif hakları"
   }
 }

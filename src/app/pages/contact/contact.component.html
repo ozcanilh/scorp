@@ -26,7 +26,7 @@
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>{{ 'Select Country' | translate }}</mat-label>
+      <mat-label>{{ 'select country' | translate }}</mat-label>
       <input type="text" matInput formControlName="country" [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">

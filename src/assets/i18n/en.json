@@ -7,7 +7,7 @@
   "Kenya": "Kenya",
   "Brazil": "Brazil",
   "Zimbabwe": "Zimbabwe",
-  "Select Country": "Select Country",
+  "select country": "Select Country",
   "name can not be empty": "Name can not be empty.",
   "title can not be empty": "Title can not be empty.",
   "email can not be empty": "Email can not be empty.",
@@ -17,6 +17,7 @@
   "country can not be empty": "Country can not be empty.",
   "email format is wrong": "email format is wrong.",
   "message should be min 10 character": "Message should be min 10 character.",
+  "login required": "Login Required for displaying",
   "navigation": {
     "home": "Home",
     "contact": "Contact",
@@ -36,5 +37,8 @@
   },
   "text": {
     "home": "Home Page is working. Welcome!"
+  },
+  "footer": {
+    "copyright": "Copyright"
   }
 }
